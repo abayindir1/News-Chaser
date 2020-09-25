@@ -3,8 +3,13 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const news = require("./routes/api/news")
+
+app.use('/api/news', news)
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
 
 // Serve static assets in production
 if(process.env.NODE_ENV === "production"){
