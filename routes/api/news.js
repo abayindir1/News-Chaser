@@ -51,4 +51,28 @@ router.get("/nbc", async (req, res) => {
   }
 });
 
+// get daily mail news
+router.get("/dm", async (req, res) => {
+  try {
+    axios.get("https://www.dailymail.co.uk/sport/premierleague/index.html").then((response) => {
+      var $ = cheerio.load(response.data);
+      var newsArray =[]
+      $(".article-small").each((i, element) => {
+        var result = new Object();
+        result.title = $(element).find(".linkro-darkred").text().trim();
+        result.link = $(element).find("a").attr("href");
+        result.summary = $(element).find("p").text().trim();
+        result.image = $(element).find("a img").attr("src")
+        result.date = $(element).find(".channel-date-container span").text().trim()
+        newsArray.push(result)
+      });
+      res.json(newsArray);
+
+    });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 module.exports = router;
