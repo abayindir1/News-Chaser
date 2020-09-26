@@ -8,15 +8,17 @@ router.get("/sky-sports", async (req, res) => {
   try {
     axios.get("https://www.skysports.com/premier-league-news").then((response) => {
       var $ = cheerio.load(response.data);
-      var result = {};
-
+      var newsArray =[]
       $(".news-list__item").each((i, element) => {
-        result.title = $(element).find(".news-list__headline-link").text();
-        // console.log(result)
-    });
-
-    console.log(result)
-    res.json(result);
+        var result = new Object();
+        result.title = $(element).find(".news-list__headline-link").text().trim();
+        result.link = $(element).find(".news-list__headline-link").attr("href")
+        result.summary = $(element).find(".news-list__snippet").text().trim();
+        result.date = $(element).find(".label__timestamp").text().trim();
+        result.image = $(element).find(".news-list__image").attr("data-src");
+        newsArray.push(result)
+      });
+      res.json(newsArray);
 
     });
   } catch (error) {
