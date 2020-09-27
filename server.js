@@ -4,10 +4,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const news = require("./routes/api/news")
-const fixtures = require("./routes/api/fixtures")
+const scores = require("./routes/api/scores")
+const table = require("./routes/api/table")
 
 app.use('/api/news', news)
-app.use('/api/fixtures', fixtures)
+app.use('/api/scores', scores)
+app.use('/api/table', table)
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
