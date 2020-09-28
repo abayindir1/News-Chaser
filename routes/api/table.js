@@ -6,12 +6,18 @@ var cheerio = require("cheerio");
 
 router.get("/table", (req, res) => {
     try {
-        axios.get("https://www.skysports.com/premier-league-table").then(response =>{
+        axios.get("https://www.goal.com/en-us/premier-league/table/2kwbbcootiqqgmrzs6o5inle5").then(response =>{
           var $ = cheerio.load(response.data);
           var tArray =[]
-          $(".standing-table__row").each((i, element) => {
+          $(".p0c-competition-tables__row").each((i, element) => {
               var result = new Object();
-              result.team = $(element).find(".standing-table__cell--name-link").text()
+              result.team = $(element).find(".p0c-competition-tables__link").text().trim()
+              result.points = $(element).find(".p0c-competition-tables__pts").text().trim()
+              result.played = $(element).find(".p0c-competition-tables__matches-played").text().trim()
+              // result.wins = $(element).find(".p0c-competition-tables__matches-won").text().trim()
+              // result.drawn = $(element).find(".p0c-competition-tables__matches-drawn").text()
+              // result.lost = $(element).find(".p0c-competition-tables__matches-lost").text().trim()
+              result.difference = $(element).find(".p0c-competition-tables__goals-diff").text().trim()
               
               tArray.push(result)
             });
