@@ -14,9 +14,6 @@ router.get("/table", (req, res) => {
               result.team = $(element).find(".p0c-competition-tables__link").text().trim()
               result.points = $(element).find(".p0c-competition-tables__pts").text().trim()
               result.played = $(element).find(".p0c-competition-tables__matches-played").text().trim()
-              // result.wins = $(element).find(".p0c-competition-tables__matches-won").text().trim()
-              // result.drawn = $(element).find(".p0c-competition-tables__matches-drawn").text()
-              // result.lost = $(element).find(".p0c-competition-tables__matches-lost").text().trim()
               result.difference = $(element).find(".p0c-competition-tables__goals-diff").text().trim()
               
               tArray.push(result)
