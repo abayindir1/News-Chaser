@@ -1,7 +1,7 @@
 *, html{
     margin: 0;
 }
-.landing{
+.main{
     background-color: #00ff87;
     text-align: center;
     /* font-family: 'Raleway', sans-serif; */
@@ -15,4 +15,20 @@ font-family: 'Staatliches', cursive;
 .title{
     padding: 15px;
     font-size: 3rem;
+    color: #38003d;
+}
+.page-content{
+    display: flex;
+}
+.right-col{
+    position:absolute;
+    right: 0;
+    width: 40%;
+    border-left:solid 3px #38003d;
+}
+.left-col{
+    position:absolute;
+    left: 0;
+    width: 60%;
+    border-right:solid 3px #38003d;
 }

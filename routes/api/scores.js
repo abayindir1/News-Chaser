@@ -4,7 +4,7 @@ const router = express.Router();
 var axios = require("axios");
 var cheerio = require("cheerio");
 
-router.get("/matches", (req, res) => {
+router.get("/", (req, res) => {
   try {
       axios.get("https://www.premierleague.com/home").then(response =>{
         var $ = cheerio.load(response.data);

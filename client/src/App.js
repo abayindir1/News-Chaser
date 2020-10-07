@@ -1,10 +1,11 @@
 import React from 'react';
-import Landing from './components/Landing/Landing';
+import Main from './components/Main/Main';
+import "./App.css"
 
 function App() {
   return (
     <div className="App">
-      <Landing/>
+      <Main/>
     </div>
   );
 }
