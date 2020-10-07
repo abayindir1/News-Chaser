@@ -1,6 +1,18 @@
+*, html{
+    margin: 0;
+}
 .landing{
     background-color: #00ff87;
+    text-align: center;
+    /* font-family: 'Raleway', sans-serif; */
+font-family: 'Staatliches', cursive;
 }
 #logo{
+    display: block;
     width: 400px;
+    margin: 0 auto;
+}
+.title{
+    padding: 15px;
+    font-size: 3rem;
 }
