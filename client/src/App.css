@@ -30,5 +30,24 @@ font-family: 'Staatliches', cursive;
     position:absolute;
     left: 0;
     width: 60%;
-    border-right:solid 3px #38003d;
+}
+
+/* Matches Table */
+.table{
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    background-color: #38003d;
+    color: #00ff87;
+}
+#scores-table{
+    width: 100%;
+}
+#scores-table th{
+    padding: 1%;
+    border-bottom: 2px solid #00ff87;
+}
+#scores-table td{
+    text-align: center;
+    padding: 1%;
 }

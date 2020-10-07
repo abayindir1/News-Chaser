@@ -1,17 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Matches() {
+  const [matches, setMatches] = useState([]);
+
   useEffect(() => {
-    axios.get("/api/scores").then((response)=>{
-        console.log(response.data)
-    })
+    getMatches();
   }, []);
 
-
+  function getMatches() {
+    axios.get("/api/scores").then((response) => {
+      setMatches(response.data);
+      console.log(response.data);
+    });
+  }
   return (
-    <div>
-      <h1>matches</h1>
+    <div className="table">
+      <table id="scores-table">
+        <tbody>
+          <tr>
+            <th>Match Between</th>
+            <th>Scores</th>
+          </tr>
+          {matches.length > 0 ? (
+            matches.map((match) => (
+              <tr>
+                <td>{match.team}</td>
+                <td>{match.scores === "" ? ("Not Played" ): (match.scores)}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td>No matches found!</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }
