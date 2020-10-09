@@ -56,6 +56,15 @@ font-family: 'Staatliches', cursive;
 .buttons{
     display: grid;
     position: absolute;
-    top: 150px;
-    left: -49px;
+    top: 10%;
+    left: 0%;
+}
+
+.btn{
+    margin-top: 15px;
+    font-size: 22px;
+    background-color: #00ff87;
+    border-radius: 15px;
+    border: 2px solid #00ff87;
+    color: #38003d;
 }
