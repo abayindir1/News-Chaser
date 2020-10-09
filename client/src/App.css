@@ -52,3 +52,10 @@ font-family: 'Staatliches', cursive;
     text-align: center;
     padding: 1%;
 }
+
+.buttons{
+    display: grid;
+    position: absolute;
+    top: 150px;
+    left: -49px;
+}

@@ -16,6 +16,8 @@ function Main() {
                <h1>left col</h1>
            </div>
            <div className="right-col">
+               <div className="buttons"><button>Scores</button>
+               <button>League Table</button></div>
                <Matches/>
            </div>
         </div>
