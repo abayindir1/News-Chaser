@@ -17,8 +17,12 @@ function Main() {
         </div>
         <div className="right-col">
           <div className="buttons">
-            <button class="btn"><i class="fas fa-futbol"></i></button>
-            <button class="btn"><i class="fas fa-table"></i></button>
+            <button class="btn">
+              <i class="fas fa-futbol"></i>
+            </button>
+            <button class="btn">
+              <i class="fas fa-table"></i>
+            </button>
           </div>
           <Matches />
         </div>
