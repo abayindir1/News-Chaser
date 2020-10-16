@@ -47,29 +47,20 @@ html {
 #scores-table th {
   padding: 1%;
   border-bottom: 2px solid #00ff87;
+  animation: 1s ease-out 0s 1 slideInFromRight;
 }
 #scores-table td {
   text-align: center;
   padding: 1%;
+  animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
-.buttons {
-  display: grid;
-  position: absolute;
-  top: 10%;
-  left: 0%;
-}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} 
 
-.btn {
-  margin-top: 15px;
-  font-size: 22px;
-  background-color: #00ff87;
-  border-radius: 15px;
-  border: 2px solid #00ff87;
-  color: #38003d;
-  display: block;
-}
-.btn:hover {
-  background-color: #38003d;
-  color: #00ff87;
-}

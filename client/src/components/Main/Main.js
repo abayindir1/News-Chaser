@@ -3,6 +3,9 @@ import Matches from "../Matches/Matches";
 import Table from "../Table/Table";
 
 function Main() {
+  const [isScores, setIsScores] = useState(true);
+
+  
   return (
     <>
       <div className="main">
@@ -18,15 +21,19 @@ function Main() {
         </div>
         <div className="right-col">
           <div className="buttons">
-            {/* <button class="btn">
-              <i class="fas fa-futbol"></i>
-            </button>
-            <button class="btn">
-              <i class="fas fa-table"></i>
-            </button> */}
+          {isScores ? (
+            <button class="btn" onClick={()=>{setIsScores(false)}}>
+            Switch Table To Standings <i class="fas fa-table"></i>
+          </button>
+          ):(<button class="btn" onClick={()=>{setIsScores(true)}}>
+          Switch Table To Matches<i class="fas fa-futbol"></i>
+        </button>)}
           </div>
-          {/* <Matches /> */}
-          <Table/>
+          {isScores ? (
+            <Matches/>
+          ):(
+            <Table/>
+          )}
         </div>
       </div>
     </>
