@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Matches from "../Matches/Matches";
+import Table from "../Table/Table";
 
 function Main() {
   return (
@@ -17,14 +18,15 @@ function Main() {
         </div>
         <div className="right-col">
           <div className="buttons">
-            <button class="btn">
+            {/* <button class="btn">
               <i class="fas fa-futbol"></i>
             </button>
             <button class="btn">
               <i class="fas fa-table"></i>
-            </button>
+            </button> */}
           </div>
-          <Matches />
+          {/* <Matches /> */}
+          <Table/>
         </div>
       </div>
     </>
