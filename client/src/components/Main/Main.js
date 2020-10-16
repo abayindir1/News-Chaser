@@ -5,7 +5,6 @@ import Table from "../Table/Table";
 function Main() {
   const [isScores, setIsScores] = useState(true);
 
-  
   return (
     <>
       <div className="main">
@@ -21,19 +20,27 @@ function Main() {
         </div>
         <div className="right-col">
           <div className="buttons">
-          {isScores ? (
-            <button class="btn" onClick={()=>{setIsScores(false)}}>
-            Switch Table To Standings <i class="fas fa-table"></i>
-          </button>
-          ):(<button class="btn" onClick={()=>{setIsScores(true)}}>
-          Switch Table To Matches<i class="fas fa-futbol"></i>
-        </button>)}
+            {isScores ? (
+              <button
+                class="btn"
+                onClick={() => {
+                  setIsScores(false);
+                }}
+              >
+                <i class="fas fa-table"></i> Switch Table To Standings <i class="fas fa-table"></i>
+              </button>
+            ) : (
+              <button
+                class="btn"
+                onClick={() => {
+                  setIsScores(true);
+                }}
+              >
+                <i class="fas fa-futbol"></i> Switch Table To Matches <i class="fas fa-futbol"></i>
+              </button>
+            )}
           </div>
-          {isScores ? (
-            <Matches/>
-          ):(
-            <Table/>
-          )}
+          {isScores ? <Matches /> : <Table />}
         </div>
       </div>
     </>
