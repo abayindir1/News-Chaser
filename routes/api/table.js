@@ -15,7 +15,6 @@ router.get("/", (req, res) => {
               result.points = $(element).find(".p0c-competition-tables__pts").text().trim()
               result.played = $(element).find(".p0c-competition-tables__matches-played").text().trim()
               result.difference = $(element).find(".p0c-competition-tables__goals-diff").text().trim()
-              
               tArray.push(result)
             });
             res.json(tArray);

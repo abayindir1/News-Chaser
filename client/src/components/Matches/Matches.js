@@ -24,7 +24,7 @@ export default function Matches() {
           </tr>
           {matches.length > 0 ? (
             matches.map((match) => (
-              <tr>
+              <tr key={match.team}>
                 <td>{match.team}</td>
                 <td>{match.scores === "" ? ("Not Played" ): (match.scores)}</td>
               </tr>

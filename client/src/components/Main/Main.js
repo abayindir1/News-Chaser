@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Matches from "../Matches/Matches";
+import SkySports from "../SkySports/SkySports";
 import Table from "../Table/Table";
 
 function Main() {
@@ -16,27 +17,31 @@ function Main() {
 
       <div className="page-content">
         <div className="left-col">
-          <h1>left col</h1>
+          <SkySports/>
         </div>
+
+
         <div className="right-col">
           <div className="buttons">
             {isScores ? (
               <button
-                class="btn"
-                onClick={() => {
+                className="btn"
+                type="button"
+                onClick={(e) => {
                   setIsScores(false);
                 }}
               >
-                <i class="fas fa-table"></i> Switch Table To Standings <i class="fas fa-table"></i>
+                <i className="fas fa-table"></i> Switch Table To Standings <i className="fas fa-table"></i>
               </button>
             ) : (
               <button
-                class="btn"
-                onClick={() => {
+                className="btn"
+                type="button"
+                onClick={(e) => {
                   setIsScores(true);
                 }}
               >
-                <i class="fas fa-futbol"></i> Switch Table To Matches <i class="fas fa-futbol"></i>
+                <i className="fas fa-futbol"></i> Switch Table To Matches <i className="fas fa-futbol"></i>
               </button>
             )}
           </div>

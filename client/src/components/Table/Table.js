@@ -27,7 +27,7 @@ export default function Table() {
           </tr>
           {teams.length > 0 ? (
             teams.map((team) => (
-              <tr>
+              <tr key={team.team}>
                 <td>{team.team}</td>
                 <td>{team.played}</td>
                 <td>{team.difference}</td>
