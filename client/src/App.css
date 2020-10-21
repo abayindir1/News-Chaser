@@ -87,3 +87,35 @@ html {
   color: #00ff87;
   border-radius: 15px;
 }
+
+/* sky sport news */
+.sky-new-card{
+  display: flex;
+  background-color: #00ff87;
+  color: #38003d;
+  padding: 1%;
+}
+
+.sky-new-img{
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid #00ff87;
+}
+
+.sky-new-content{
+  margin-left: 15px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+.sky-new-date{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sky-new-content > a{
+  color: black;
+  text-decoration: none;
+}
+

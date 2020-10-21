@@ -20,15 +20,17 @@ export default function SkySports() {
       {news.length > 0 ? (
         news.map((el) => (
           <div className="sky-new-card">
-            <div className="sky-new-img">
-              <img src={el.image} />
+            <div>
+              <a href={el.link}>
+                <img src={el.image} className="sky-new-img" />
+              </a>
             </div>
             <div className="sky-new-content">
               <a href={el.link}>
-                <h2>{el.title}</h2>
+                <h2>- {el.title}</h2>
               </a>
               <h3>{el.summary}</h3>
-              <p>{el.date}</p>
+              <p className="sky-new-date">{el.date}</p>
             </div>
           </div>
         ))
