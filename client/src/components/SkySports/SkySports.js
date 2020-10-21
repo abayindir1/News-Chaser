@@ -8,23 +8,33 @@ export default function SkySports() {
     getNews();
   }, []);
 
-  function getNews(){
-      axios.get("/api/news/sky-sports").then(res =>{
-          setNews(res.data)
-          console.log(res.data)
-      })
-  };
-
+  function getNews() {
+    axios.get("/api/news/sky-sports").then((res) => {
+      setNews(res.data);
+      console.log(res.data);
+    });
+  }
 
   return (
-  <div>
+    <div>
       {news.length > 0 ? (
-           news.map((el) => (
-            <h3>{el.title}</h3>
-          ))
-      ):(
-          <h1>No News Found!</h1>
+        news.map((el) => (
+          <div className="sky-new-card">
+            <div className="sky-new-img">
+              <img src={el.image} />
+            </div>
+            <div className="sky-new-content">
+              <a href={el.link}>
+                <h2>{el.title}</h2>
+              </a>
+              <h3>{el.summary}</h3>
+              <p>{el.date}</p>
+            </div>
+          </div>
+        ))
+      ) : (
+        <h1>No News Found!</h1>
       )}
-  </div>
+    </div>
   );
 }
