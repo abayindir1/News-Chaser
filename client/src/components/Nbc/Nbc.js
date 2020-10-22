@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
-import axios from "axios"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function Nbc() {
-    const [news, setNews] = useState([]);
+  const [news, setNews] = useState([]);
 
   useEffect(() => {
     getNews();
@@ -10,14 +10,32 @@ export default function Nbc() {
 
   function getNews() {
     axios.get("/api/news/nbc").then((res) => {
-    //   setNews(res.data);
-    var items = res.data.slice(0, 15)
-      setNews(items)
+      //   setNews(res.data);
+      var items = res.data.slice(0, 15);
+      setNews(items);
     });
   }
-    return (
-        <div>
-            bum
-        </div>
-    )
+  return (
+    <div>
+      {news.length > 0 ? (
+        news.map((el) => (
+          <div className="new-card" key={el.title}>
+            <div>
+              <a href={el.link}>
+                <img src={el.image} className="new-img" />
+              </a>
+            </div>
+            <div className="new-content">
+              <a href={el.link}>
+                <h2>- {el.title}</h2>
+              </a>
+              <h3>{el.summary}</h3>
+            </div>
+          </div>
+        ))
+      ) : (
+        <h1>No news found!</h1>
+      )}
+    </div>
+  );
 }

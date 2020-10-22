@@ -19,13 +19,13 @@ export default function SkySports() {
     <div>
       {news.length > 0 ? (
         news.map((el) => (
-          <div className="sky-new-card" key={el.title}>
+          <div className="new-card" key={el.title}>
             <div>
               <a href={el.link}>
-                <img src={el.image} className="sky-new-img" />
+                <img src={el.image} className="new-img" />
               </a>
             </div>
-            <div className="sky-new-content">
+            <div className="new-content">
               <a href={el.link}>
                 <h2>- {el.title}</h2>
               </a>

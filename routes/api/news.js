@@ -15,7 +15,6 @@ router.get("/sky-sports", async (req, res) => {
         result.title = $(element).find(".news-list__headline-link").text().trim();
         result.link = $(element).find(".news-list__headline-link").attr("href")
         result.summary = $(element).find(".news-list__snippet").text().trim();
-        result.date = $(element).find(".label__timestamp").text().trim();
         result.image = $(element).find(".news-list__image").attr("data-src");
         newsArray.push(result)
       });
