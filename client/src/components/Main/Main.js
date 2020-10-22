@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DailyMail from "../DailyMail/DailyMail";
 import Matches from "../Matches/Matches";
 import Nbc from "../Nbc/Nbc";
 import SkySports from "../SkySports/SkySports";
@@ -28,7 +29,8 @@ function Main() {
             </div>
           </div>
           {/* <SkySports/> */}
-          <Nbc/>
+          {/* <Nbc/> */}
+          <DailyMail/>
         </div>
 
 

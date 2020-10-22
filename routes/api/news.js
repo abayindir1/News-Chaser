@@ -62,7 +62,6 @@ router.get("/dm", async (req, res) => {
         result.link = $(element).find("a").attr("href");
         result.summary = $(element).find("p").text().trim();
         result.image = $(element).find("a img").attr("src")
-        result.date = $(element).find(".channel-date-container span").text().trim()
         newsArray.push(result)
       });
       res.json(newsArray);
