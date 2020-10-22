@@ -11,7 +11,6 @@ export default function Matches() {
   function getMatches() {
     axios.get("/api/scores").then((response) => {
       setMatches(response.data);
-      console.log(response.data);
     });
   }
   return (

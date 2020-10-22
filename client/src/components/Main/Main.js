@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Matches from "../Matches/Matches";
+import Nbc from "../Nbc/Nbc";
 import SkySports from "../SkySports/SkySports";
 import Table from "../Table/Table";
 
@@ -17,7 +18,17 @@ function Main() {
 
       <div className="page-content">
         <div className="left-col">
-          <SkySports/>
+          <div className="left-col-header">
+            <h1>News</h1>
+            <div className="news-buttons">
+              <button>Sky Sports</button>
+              <button>bum</button>
+              <button>bum</button>
+              <button>bum</button>
+            </div>
+          </div>
+          {/* <SkySports/> */}
+          <Nbc/>
         </div>
 
 

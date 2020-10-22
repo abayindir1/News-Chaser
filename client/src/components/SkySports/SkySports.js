@@ -10,8 +10,8 @@ export default function SkySports() {
 
   function getNews() {
     axios.get("/api/news/sky-sports").then((res) => {
-      setNews(res.data);
-      console.log(res.data);
+      var items = res.data.slice(0, 15)
+      setNews(items)
     });
   }
 
@@ -19,7 +19,7 @@ export default function SkySports() {
     <div>
       {news.length > 0 ? (
         news.map((el) => (
-          <div className="sky-new-card">
+          <div className="sky-new-card" key={el.title}>
             <div>
               <a href={el.link}>
                 <img src={el.image} className="sky-new-img" />
@@ -30,7 +30,6 @@ export default function SkySports() {
                 <h2>- {el.title}</h2>
               </a>
               <h3>{el.summary}</h3>
-              <p className="sky-new-date">{el.date}</p>
             </div>
           </div>
         ))
