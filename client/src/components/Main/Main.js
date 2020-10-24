@@ -21,19 +21,18 @@ function Main() {
       <div className="page-content">
         <div className="left-col">
           <div className="left-col-header">
-            <h1>News</h1>
             <div className="news-buttons">
-              <button className={status === "sky" ? "news-btn active" : "news-btn"}
+              <button className={status === "sky" ? "active" : "news-btn"}
                 type="button"
                 onClick={(e) => {
                   setStatus("sky");
                 }}>Sky Sports</button>
-              <button className={status === "nbc" ? "news-btn active" : "news-btn"}
+              <button className={status === "nbc" ? "active" : "news-btn"}
                 type="button"
                 onClick={(e) => {
                   setStatus("nbc");
                 }}>NBC</button>
-              <button className={status === "dm" ? "news-btn active" : "news-btn"}
+              <button className={status === "dm" ? "active" : "news-btn"}
                 type="button"
                 onClick={(e) => {
                   setStatus("dm");
