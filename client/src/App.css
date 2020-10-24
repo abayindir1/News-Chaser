@@ -3,6 +3,9 @@ html {
   margin: 0;
   scroll-behavior: smooth;
 }
+body{
+  background-color: #00ff87;
+}
 .main {
   background-color: #00ff87;
   text-align: center;
@@ -21,6 +24,7 @@ html {
 }
 .page-content {
   display: flex;
+  height: 500px;
 }
 .right-col {
   position: absolute;
@@ -79,6 +83,18 @@ html {
   }
 }
 
+.header{
+  background-color: #00ff87;
+  color: #38003d;
+  text-align: center;
+  padding: 1.5%;
+  font-family: "Staatliches", cursive;
+}
+
+.matches{
+  margin-top: 1%;
+}
+
 /*news */
 .new-card {
   display: flex;
@@ -117,6 +133,7 @@ html {
   transition: 1s;
   padding: 1%;
   font-family: "Raleway", sans-serif;
+  min-width: 50px;
 
   background-size: 200% 100%;
     background-image: linear-gradient(to right, #38003d 50%, #00ff87 50%);
@@ -137,5 +154,6 @@ html {
   transition: 1s;
   padding: 1%;
   font-family: "Raleway", sans-serif;
+  min-width: 50px;
 } 
 

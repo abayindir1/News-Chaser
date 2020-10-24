@@ -11,7 +11,7 @@ export default function DailyMail() {
   function getNews() {
     axios.get("/api/news/dm").then((res) => {
       //   setNews(res.data);
-      var items = res.data.slice(0, 15);
+      var items = res.data.slice(0, 11);
       setNews(items);
     });
   }

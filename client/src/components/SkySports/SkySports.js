@@ -10,7 +10,7 @@ export default function SkySports() {
 
   function getNews() {
     axios.get("/api/news/sky-sports").then((res) => {
-      var items = res.data.slice(0, 15)
+      var items = res.data.slice(0, 11)
       setNews(items)
     });
   }

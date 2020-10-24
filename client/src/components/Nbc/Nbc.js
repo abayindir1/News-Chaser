@@ -11,7 +11,7 @@ export default function Nbc() {
   function getNews() {
     axios.get("/api/news/nbc").then((res) => {
       //   setNews(res.data);
-      var items = res.data.slice(0, 15);
+      var items = res.data.slice(0, 11);
       setNews(items);
     });
   }
