@@ -73,26 +73,6 @@ router.get("/dm", async (req, res) => {
   }
 });
 
-// get talk sport news
-router.get("/talk-sport", async (req, res) => {
-  try {
-    axios.get("https://talksport.com/football/premier-league/").then((response) => {
-      var $ = cheerio.load(response.data);
-      var newsArray =[]
-      $(".rail__item").each((i, element) => {
-        var result = new Object();
-        result.headline = $(element).find(".rail__item-headline").text().trim();
-        result.link = $(element).find("a").attr("href");
-        result.summary = $(element).find(".rail__item-sub").text().trim();
-        newsArray.push(result)
-      });
-      res.json(newsArray);
 
-    });
-  } catch (error) {
-    console.error(error.message);
-    res.status(500).send("Server Error");
-  }
-});
 
 module.exports = router;

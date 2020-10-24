@@ -7,6 +7,7 @@ import Table from "../Table/Table";
 
 function Main() {
   const [isScores, setIsScores] = useState(true);
+  const [status, setStatus] = useState("sky")
 
   return (
     <>
@@ -22,15 +23,24 @@ function Main() {
           <div className="left-col-header">
             <h1>News</h1>
             <div className="news-buttons">
-              <button>Sky Sports</button>
-              <button>bum</button>
-              <button>bum</button>
-              <button>bum</button>
+              <button className={status === "sky" ? "news-btn active" : "news-btn"}
+                type="button"
+                onClick={(e) => {
+                  setStatus("sky");
+                }}>Sky Sports</button>
+              <button className={status === "nbc" ? "news-btn active" : "news-btn"}
+                type="button"
+                onClick={(e) => {
+                  setStatus("nbc");
+                }}>NBC</button>
+              <button className={status === "dm" ? "news-btn active" : "news-btn"}
+                type="button"
+                onClick={(e) => {
+                  setStatus("dm");
+                }}>Daily Mail Sports</button>
             </div>
           </div>
-          {/* <SkySports/> */}
-          {/* <Nbc/> */}
-          <DailyMail/>
+          {status === 'sky' ? <SkySports/> : status === 'nbc' ? <Nbc/> : <DailyMail/>}
         </div>
 
 
