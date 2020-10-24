@@ -46,7 +46,7 @@ html {
   justify-content: space-evenly;
 }
 
-/* Matches Table */
+/* Tables */
 .table {
   width: 100%;
   font-size: 1.5rem;
@@ -77,27 +77,6 @@ html {
     transform: translateX(0%);
     opacity: 1;
   }
-}
-
-.buttons {
-  background-color: #00ff87;
-  padding: 0 0 2% 0;
-  text-align: center;
-}
-.btn {
-  background-color: #00ff87;
-  color: #38003d;
-  font-size: 1.5rem;
-  border: 2px solid #38003d;
-  box-shadow: 0 4px 8px 0 #38003d, 0 6px 20px 0 #38003d;
-  transition: 1s;
-  padding: 1%;
-  font-family: "Raleway", sans-serif;
-}
-.btn:hover {
-  background-color: #38003d;
-  color: #00ff87;
-  border-radius: 15px;
 }
 
 /*news */
