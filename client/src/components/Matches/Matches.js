@@ -21,7 +21,7 @@ export default function Matches() {
             <th>Match Between</th>
             <th>Scores</th>
           </tr>
-          {matches.length > 0 ? (
+          {matches.length > 0 && !matches.forEach(element => element !== " ") ? (
             matches.map((match) => (
               <tr key={match.team}>
                 <td>{match.team}</td>
