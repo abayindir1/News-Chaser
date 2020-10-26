@@ -101,6 +101,7 @@ body{
   background-color: #00ff87;
   color: #38003d;
   padding: 1%;
+  animation: 2s ease-out 0s 1 slideInFromRight;
 }
 
 .new-img {

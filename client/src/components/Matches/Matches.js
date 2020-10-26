@@ -25,12 +25,12 @@ export default function Matches() {
             matches.map((match) => (
               <tr key={match.team}>
                 <td>{match.team}</td>
-                <td>{match.scores === "" ? "Not Played" : match.scores}</td>
+                <td>{match.scores === "" ? "Not Played Yet" : match.scores}</td>
               </tr>
             ))
           ) : (
-            <tr>
-              <td>No matches found!</td>
+            <tr style={{textAlign: "center"}}>
+              <td>Loading...</td>
             </tr>
           )}
         </tbody>

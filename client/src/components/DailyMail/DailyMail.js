@@ -34,7 +34,7 @@ export default function DailyMail() {
           </div>
         ))
       ) : (
-        <h1>No news found!</h1>
+        <h1>Loading...</h1>
       )}
     </div>
   );

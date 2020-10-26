@@ -34,7 +34,7 @@ export default function SkySports() {
           </div>
         ))
       ) : (
-        <h1>No News Found!</h1>
+        <h1>Loading...</h1>
       )}
     </div>
   );
