@@ -20,6 +20,7 @@ export default function Table() {
       <table id="scores-table">
         <tbody>
           <tr>
+            <th>Pst</th>
             <th>Club</th>
             <th>MP</th>
             <th>GF</th>
@@ -28,6 +29,7 @@ export default function Table() {
           {teams.length > 0 ? (
             teams.map((team) => (
               <tr key={team.team}>
+                <td>{teams.indexOf(team)+1}</td>
                 <td>{team.team}</td>
                 <td>{team.played}</td>
                 <td>{team.difference}</td>

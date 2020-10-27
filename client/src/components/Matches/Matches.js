@@ -18,7 +18,7 @@ export default function Matches() {
       <table id="scores-table">
         <tbody>
           <tr>
-            <th>Match Between</th>
+            <th>Matches</th>
             <th>Scores</th>
           </tr>
           {matches.length > 0 && !matches.forEach(element => element !== " ") ? (

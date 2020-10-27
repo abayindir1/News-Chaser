@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DailyMail from "../DailyMail/DailyMail";
 import Matches from "../Matches/Matches";
+import MobileResponsiveTables from "../MobileResponsiveTables/MobileResponsiveTables";
 import Nbc from "../Nbc/Nbc";
 import SkySports from "../SkySports/SkySports";
 import Table from "../Table/Table";
@@ -88,6 +89,8 @@ class Main extends Component {
               </div>
           </div>
         </div>
+
+        <MobileResponsiveTables/>
       </>
     );
   }
