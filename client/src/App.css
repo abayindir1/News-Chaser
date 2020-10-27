@@ -71,6 +71,9 @@ body{
   padding: 1%;
   animation: 2s ease-out 0s 1 slideInFromRight;
 }
+.hidden-td{
+  display: none;
+}
 
 @keyframes slideInFromRight {
   0% {

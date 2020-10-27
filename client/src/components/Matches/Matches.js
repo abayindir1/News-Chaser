@@ -21,11 +21,11 @@ export default function Matches() {
             <th>Matches</th>
             <th>Scores</th>
           </tr>
-          {matches.length > 0 && !matches.forEach(element => element !== " ") ? (
+          {matches.length > 0 ? (
             matches.map((match) => (
               <tr key={match.team}>
-                <td>{match.team}</td>
-                <td>{match.scores === "" ? "Not Played Yet" : match.scores}</td>
+                <td class={match.team === " - " ? "hidden-td" : ""}>{match.team}</td>
+                <td class={match.team === " - " ? "hidden-td" : ""}>{match.scores === "" ? "Not Played Yet" : match.scores}</td>
               </tr>
             ))
           ) : (
