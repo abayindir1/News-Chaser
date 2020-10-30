@@ -180,6 +180,16 @@ h2:hover{
   text-decoration: underline;
 }
 
+.responsive-button{
+  background-color: #38003d;
+  color: #00ff87;
+  padding: 1%;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+  font-family: "Raleway", sans-serif;
+  border: solid 3px #38003d;
+}
+
 /* mobile phones */
 @media only screen and (max-width: 768px) {
   .right-col{
@@ -203,16 +213,18 @@ h2:hover{
   .responsive-content{
     display: flex;
     width: 100%;
-    background-color: #00ff87;
+    background-color: #38003d;
     justify-content: space-evenly;
+    transition: 1;
   }
 
   .responsive-content-hidden{
     display: none;
+    transition: 1;
   }
 
   .table {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .new-img {
@@ -220,5 +232,41 @@ h2:hover{
   }
   h2, h3{
     font-size: 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 420px) {
+  .left-col{
+    width: 100%;
+  }
+
+  .news-btn{
+    font-size: 0.5rem;
+  }
+  .active{
+    font-size: 0.7rem;
+  }
+
+  .table {
+    font-size: 0.6rem;
+  }
+
+  .new-img {
+    width: 150px;
+  }
+  h2{
+    color: #38003d;
+  }
+  h2, h3{
+    font-size: 0.8rem;
+  }
+
+  .responsive-button{
+    left: 35%;
+  }
+
+  .new-card{
+    margin-bottom: 20px;
   }
 }
